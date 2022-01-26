@@ -1,0 +1,6 @@
+module Pods_SwiftSoupProject {
+  umbrella header "Pods-SwiftSoupProject-umbrella.h"
+
+  export *
+  module * { export * }
+}

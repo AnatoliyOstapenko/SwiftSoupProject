@@ -7,23 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		51E22BE457BFF64E754F4480 /* libPods-SwiftSoupProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 87F7727FDE0FA2A146C18B72 /* libPods-SwiftSoupProject.a */; };
 		FA9EBEF227A1C19F00657BD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9EBEF127A1C19F00657BD0 /* AppDelegate.swift */; };
 		FA9EBEF427A1C19F00657BD0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9EBEF327A1C19F00657BD0 /* SceneDelegate.swift */; };
-		FA9EBEF627A1C19F00657BD0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9EBEF527A1C19F00657BD0 /* ViewController.swift */; };
+		FA9EBEF627A1C19F00657BD0 /* SwiftSoupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9EBEF527A1C19F00657BD0 /* SwiftSoupViewController.swift */; };
 		FA9EBEF927A1C19F00657BD0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA9EBEF727A1C19F00657BD0 /* Main.storyboard */; };
 		FA9EBEFB27A1C1A200657BD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA9EBEFA27A1C1A200657BD0 /* Assets.xcassets */; };
 		FA9EBEFE27A1C1A200657BD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA9EBEFC27A1C1A200657BD0 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		87F7727FDE0FA2A146C18B72 /* libPods-SwiftSoupProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SwiftSoupProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CEAF0F0F005885AAEB2B849 /* Pods-SwiftSoupProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftSoupProject.debug.xcconfig"; path = "Target Support Files/Pods-SwiftSoupProject/Pods-SwiftSoupProject.debug.xcconfig"; sourceTree = "<group>"; };
 		FA9EBEEE27A1C19F00657BD0 /* SwiftSoupProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftSoupProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA9EBEF127A1C19F00657BD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA9EBEF327A1C19F00657BD0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FA9EBEF527A1C19F00657BD0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FA9EBEF527A1C19F00657BD0 /* SwiftSoupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSoupViewController.swift; sourceTree = "<group>"; };
 		FA9EBEF827A1C19F00657BD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FA9EBEFA27A1C1A200657BD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA9EBEFD27A1C1A200657BD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA9EBEFF27A1C1A200657BD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFFB22FBBECB2DB4A6E05B93 /* Pods-SwiftSoupProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftSoupProject.release.xcconfig"; path = "Target Support Files/Pods-SwiftSoupProject/Pods-SwiftSoupProject.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51E22BE457BFF64E754F4480 /* libPods-SwiftSoupProject.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		14ACF07944AEBF946121D31B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				87F7727FDE0FA2A146C18B72 /* libPods-SwiftSoupProject.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		96AD353405A79FAFF1C46628 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8CEAF0F0F005885AAEB2B849 /* Pods-SwiftSoupProject.debug.xcconfig */,
+				FFFB22FBBECB2DB4A6E05B93 /* Pods-SwiftSoupProject.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		FA9EBEE527A1C19F00657BD0 = {
 			isa = PBXGroup;
 			children = (
 				FA9EBEF027A1C19F00657BD0 /* SwiftSoupProject */,
 				FA9EBEEF27A1C19F00657BD0 /* Products */,
+				96AD353405A79FAFF1C46628 /* Pods */,
+				14ACF07944AEBF946121D31B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,7 +82,7 @@
 			children = (
 				FA9EBEF127A1C19F00657BD0 /* AppDelegate.swift */,
 				FA9EBEF327A1C19F00657BD0 /* SceneDelegate.swift */,
-				FA9EBEF527A1C19F00657BD0 /* ViewController.swift */,
+				FA9EBEF527A1C19F00657BD0 /* SwiftSoupViewController.swift */,
 				FA9EBEF727A1C19F00657BD0 /* Main.storyboard */,
 				FA9EBEFA27A1C1A200657BD0 /* Assets.xcassets */,
 				FA9EBEFC27A1C1A200657BD0 /* LaunchScreen.storyboard */,
@@ -74,6 +98,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA9EBF0227A1C1A200657BD0 /* Build configuration list for PBXNativeTarget "SwiftSoupProject" */;
 			buildPhases = (
+				7283FD90402A64F2BCE56B4B /* [CP] Check Pods Manifest.lock */,
 				FA9EBEEA27A1C19F00657BD0 /* Sources */,
 				FA9EBEEB27A1C19F00657BD0 /* Frameworks */,
 				FA9EBEEC27A1C19F00657BD0 /* Resources */,
@@ -132,12 +157,37 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7283FD90402A64F2BCE56B4B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwiftSoupProject-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FA9EBEEA27A1C19F00657BD0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA9EBEF627A1C19F00657BD0 /* ViewController.swift in Sources */,
+				FA9EBEF627A1C19F00657BD0 /* SwiftSoupViewController.swift in Sources */,
 				FA9EBEF227A1C19F00657BD0 /* AppDelegate.swift in Sources */,
 				FA9EBEF427A1C19F00657BD0 /* SceneDelegate.swift in Sources */,
 			);
@@ -283,6 +333,7 @@
 		};
 		FA9EBF0327A1C1A200657BD0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8CEAF0F0F005885AAEB2B849 /* Pods-SwiftSoupProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +353,7 @@
 		};
 		FA9EBF0427A1C1A200657BD0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFFB22FBBECB2DB4A6E05B93 /* Pods-SwiftSoupProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
