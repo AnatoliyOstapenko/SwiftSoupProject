@@ -12,12 +12,18 @@ class SwiftSoupViewController: UIViewController {
     
     let urlString = "https://www.avenga.com/career/ukraine/all-openings/"
     var array: [String] = []
-
     
-    @IBOutlet weak var textLabel: UILabel!
+    @IBOutlet weak var importButton: UIBarButtonItem!
+    @IBOutlet weak var addButton: UIBarButtonItem!
+    @IBOutlet weak var swiftSoupTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // registration nib
+        swiftSoupTableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
+        
+        swiftSoupTableView.dataSource = self
 
     }
     
@@ -46,7 +52,38 @@ class SwiftSoupViewController: UIViewController {
             } catch let error as NSError { print("Problem with parsing \(error)")}
         } catch let error as NSError { print("There is an error with html string \(error)") }
     }
+    
+    @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
+    }
+    
+    @IBAction func importButtonPressed(_ sender: UIBarButtonItem) {
+        parseHTML()
+        DispatchQueue.main.async {
+            self.swiftSoupTableView.reloadData()
+        }
+    }
+    
 
 
+}
+// MARK:- TableView Data Source Method
+
+extension SwiftSoupViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return array.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! TableViewCell
+        
+        cell.categoryLabel.text = "Category \(indexPath.row)"
+        cell.locationLabel.text = "Location \(indexPath.row)"
+        cell.positionLabel.text = array[indexPath.row]
+        
+        
+        return cell
+    }
+    
+    
 }
 

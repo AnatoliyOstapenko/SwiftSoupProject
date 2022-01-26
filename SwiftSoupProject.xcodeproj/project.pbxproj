@@ -14,6 +14,8 @@
 		FA9EBEF927A1C19F00657BD0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA9EBEF727A1C19F00657BD0 /* Main.storyboard */; };
 		FA9EBEFB27A1C1A200657BD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA9EBEFA27A1C1A200657BD0 /* Assets.xcassets */; };
 		FA9EBEFE27A1C1A200657BD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA9EBEFC27A1C1A200657BD0 /* LaunchScreen.storyboard */; };
+		FA9EBF0C27A1F81700657BD0 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9EBF0A27A1F81700657BD0 /* TableViewCell.swift */; };
+		FA9EBF0D27A1F81700657BD0 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA9EBF0B27A1F81700657BD0 /* TableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		FA9EBEFA27A1C1A200657BD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA9EBEFD27A1C1A200657BD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA9EBEFF27A1C1A200657BD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA9EBF0A27A1F81700657BD0 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		FA9EBF0B27A1F81700657BD0 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		FFFB22FBBECB2DB4A6E05B93 /* Pods-SwiftSoupProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftSoupProject.release.xcconfig"; path = "Target Support Files/Pods-SwiftSoupProject/Pods-SwiftSoupProject.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,13 +86,31 @@
 			children = (
 				FA9EBEF127A1C19F00657BD0 /* AppDelegate.swift */,
 				FA9EBEF327A1C19F00657BD0 /* SceneDelegate.swift */,
-				FA9EBEF527A1C19F00657BD0 /* SwiftSoupViewController.swift */,
-				FA9EBEF727A1C19F00657BD0 /* Main.storyboard */,
+				FA9EBF1227A1FFC400657BD0 /* Controller */,
+				FA9EBF1027A1FF9800657BD0 /* View */,
 				FA9EBEFA27A1C1A200657BD0 /* Assets.xcassets */,
 				FA9EBEFC27A1C1A200657BD0 /* LaunchScreen.storyboard */,
 				FA9EBEFF27A1C1A200657BD0 /* Info.plist */,
 			);
 			path = SwiftSoupProject;
+			sourceTree = "<group>";
+		};
+		FA9EBF1027A1FF9800657BD0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA9EBEF727A1C19F00657BD0 /* Main.storyboard */,
+				FA9EBF0B27A1F81700657BD0 /* TableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FA9EBF1227A1FFC400657BD0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FA9EBEF527A1C19F00657BD0 /* SwiftSoupViewController.swift */,
+				FA9EBF0A27A1F81700657BD0 /* TableViewCell.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA9EBEFE27A1C1A200657BD0 /* LaunchScreen.storyboard in Resources */,
+				FA9EBF0D27A1F81700657BD0 /* TableViewCell.xib in Resources */,
 				FA9EBEFB27A1C1A200657BD0 /* Assets.xcassets in Resources */,
 				FA9EBEF927A1C19F00657BD0 /* Main.storyboard in Resources */,
 			);
@@ -188,6 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA9EBEF627A1C19F00657BD0 /* SwiftSoupViewController.swift in Sources */,
+				FA9EBF0C27A1F81700657BD0 /* TableViewCell.swift in Sources */,
 				FA9EBEF227A1C19F00657BD0 /* AppDelegate.swift in Sources */,
 				FA9EBEF427A1C19F00657BD0 /* SceneDelegate.swift in Sources */,
 			);
