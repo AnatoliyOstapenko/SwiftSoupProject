@@ -9,11 +9,9 @@ import UIKit
 import SwiftSoup
 
 class SwiftSoupViewController: UIViewController {
-    
     var manager = Manager()
     var array: [String] = []
-    let urlString = "https://www.avenga.com/career/ukraine/all-openings/"
-    
+
     @IBOutlet weak var importButton: UIBarButtonItem!
     @IBOutlet weak var addButton: UIBarButtonItem!
     @IBOutlet weak var swiftSoupTableView: UITableView!
@@ -27,14 +25,12 @@ class SwiftSoupViewController: UIViewController {
         swiftSoupTableView.dataSource = self
 
     }
-    
-    
-    
+
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
     }
     
     @IBAction func importButtonPressed(_ sender: UIBarButtonItem) {
-        manager.parseHTML(urlString)
+        manager.parseHTML(K.urlString)
     }
     
 
@@ -44,7 +40,6 @@ class SwiftSoupViewController: UIViewController {
 
 extension SwiftSoupViewController: ManagerProtocol {
     func updateUI(_ data: String) {
-        print(" position is \(data)")
         array.append(data)
         DispatchQueue.main.async {
             self.swiftSoupTableView.reloadData()
