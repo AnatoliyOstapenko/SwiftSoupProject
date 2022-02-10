@@ -7,8 +7,6 @@
 
 import UIKit
 
-
-
 class SwiftSoupViewController: UIViewController {
     
     var manager = Manager()
@@ -36,7 +34,6 @@ class SwiftSoupViewController: UIViewController {
         // registration nib
         swiftSoupTableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
         manager.managerDelegate = self
-//        manager.managerProtocol = self
         swiftSoupTableView.dataSource = self
         
         // Add the loadingActivityIndicator in the center of view

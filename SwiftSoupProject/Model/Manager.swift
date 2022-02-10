@@ -15,6 +15,7 @@ protocol ManagerDelegate: class {
 
 struct Manager {
     
+    
     weak var managerDelegate: ManagerDelegate? // weak reference to protocol (ARC)
         
     func parseHTML(_ urlString: String) {
