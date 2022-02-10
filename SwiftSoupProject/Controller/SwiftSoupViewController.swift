@@ -6,7 +6,8 @@
 //
 
 import UIKit
-import SwiftSoup
+
+
 
 class SwiftSoupViewController: UIViewController {
     
@@ -17,7 +18,7 @@ class SwiftSoupViewController: UIViewController {
         let indicator = UIActivityIndicatorView()
         indicator.style = .large
         indicator.color = .label
-        // Setting the autoresizing mask to flexible for all directions will keep the indicator in the center
+        // Setting the autoresizing mask to keep the spinner in the center
         indicator.autoresizingMask = [
             .flexibleLeftMargin, .flexibleRightMargin,
             .flexibleTopMargin, .flexibleBottomMargin
@@ -34,7 +35,8 @@ class SwiftSoupViewController: UIViewController {
 
         // registration nib
         swiftSoupTableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
-        manager.managerProtocol = self
+        manager.managerDelegate = self
+//        manager.managerProtocol = self
         swiftSoupTableView.dataSource = self
         
         // Add the loadingActivityIndicator in the center of view
@@ -60,9 +62,9 @@ class SwiftSoupViewController: UIViewController {
 
 // MARK:- Manager Delegate Protocol
 
-extension SwiftSoupViewController: ManagerProtocol {
+extension SwiftSoupViewController: ManagerDelegate {
     func updateUI(_ data: String) {
-        
+
             array.append(data)
             DispatchQueue.main.async {
                 self.spinner.stopAnimating()

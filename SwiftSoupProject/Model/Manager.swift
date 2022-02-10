@@ -8,15 +8,15 @@
 import Foundation
 import SwiftSoup
 
-protocol ManagerProtocol {
+// create protocol with class AnyObject
+protocol ManagerDelegate: class {
     func updateUI(_ data: String)
 }
 
 struct Manager {
     
-    var managerProtocol: ManagerProtocol?
-    
-    
+    weak var managerDelegate: ManagerDelegate? // weak reference to protocol (ARC)
+        
     func parseHTML(_ urlString: String) {
         guard let url = URL(string: urlString) else { return }
         
@@ -32,7 +32,8 @@ struct Manager {
                 if position == "Apply proactively" {
                     break
                 } else {
-                    managerProtocol?.updateUI(position)
+                    managerDelegate?.updateUI(position)
+
                 }
             }
         } catch let error as NSError { print(error)}
