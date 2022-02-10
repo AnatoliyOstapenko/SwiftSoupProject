@@ -9,8 +9,21 @@ import UIKit
 import SwiftSoup
 
 class SwiftSoupViewController: UIViewController {
+    
     var manager = Manager()
     var array: [String] = []
+    
+    var spinner: UIActivityIndicatorView = {
+        let indicator = UIActivityIndicatorView()
+        indicator.style = .large
+        indicator.color = .label
+        // Setting the autoresizing mask to flexible for all directions will keep the indicator in the center
+        indicator.autoresizingMask = [
+            .flexibleLeftMargin, .flexibleRightMargin,
+            .flexibleTopMargin, .flexibleBottomMargin
+        ]
+        return indicator
+    }()
 
     @IBOutlet weak var importButton: UIBarButtonItem!
     @IBOutlet weak var addButton: UIBarButtonItem!
@@ -23,29 +36,39 @@ class SwiftSoupViewController: UIViewController {
         swiftSoupTableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
         manager.managerProtocol = self
         swiftSoupTableView.dataSource = self
+        
+        // Add the loadingActivityIndicator in the center of view
+        spinner.center = CGPoint(x: view.bounds.midX, y: view.bounds.midY)
+        view.addSubview(spinner)
 
     }
 
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
+        
     }
     
     @IBAction func importButtonPressed(_ sender: UIBarButtonItem) {
-        manager.parseHTML(K.urlString)
+        spinner.startAnimating()
+        // set parsing process into other dispatch. avoid freezing screen
+        let dispatch = DispatchQueue.global(qos: .utility)
+        dispatch.async {
+            self.manager.parseHTML(K.urlString)
+        }
+        
     }
-    
-
-
 }
-// MARK:- ManagerProtocol
+
+// MARK:- Manager Delegate Protocol
 
 extension SwiftSoupViewController: ManagerProtocol {
     func updateUI(_ data: String) {
-        array.append(data)
-        DispatchQueue.main.async {
-            self.swiftSoupTableView.reloadData()
-        }
+        
+            array.append(data)
+            DispatchQueue.main.async {
+                self.spinner.stopAnimating()
+                self.swiftSoupTableView.reloadData()
+            }
     }
-    
 }
 
 // MARK:- TableView Data Source Method

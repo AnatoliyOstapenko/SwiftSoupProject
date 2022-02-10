@@ -32,7 +32,6 @@ struct Manager {
                 if position == "Apply proactively" {
                     break
                 } else {
-                    print("protocol is \(position)")
                     managerProtocol?.updateUI(position)
                 }
             }
