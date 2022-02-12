@@ -11,7 +11,7 @@ class SwiftSoupViewController: UIViewController {
     
     var manager = Manager()
     var array: [String] = []
-    
+    // Initialization spinner with closures
     var spinner: UIActivityIndicatorView = {
         let indicator = UIActivityIndicatorView()
         indicator.style = .large
@@ -39,8 +39,8 @@ class SwiftSoupViewController: UIViewController {
         // Add the loadingActivityIndicator in the center of view
         spinner.center = CGPoint(x: view.bounds.midX, y: view.bounds.midY)
         view.addSubview(spinner)
-
-    }
+        
+        }
 
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
         
